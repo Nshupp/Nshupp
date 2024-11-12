@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            margin-top: 10px;
+        }
+        textarea {
+            resize: none;
+        }
+        .submit-reset-buttons {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Music Survey Form</h1>
+
+    <div class="form-container">
+        <form action="http://example.com/submit" method="post">
+
+            <!-- Name Text Box -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <!-- Email Address -->
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <!-- Scrolling Text Box -->
+            <label for="feedback">Your Feedback:</label><br>
+            <textarea id="feedback" name="feedback" rows="3" cols="60"></textarea><br><br>
+
+            <!-- Music Preferences Radio Buttons -->
+            <fieldset>
+                <legend>What type of music do you prefer?</legend>
+                <input type="radio" id="pop" name="music_type" value="Pop">
+                <label for="pop">Pop</label><br>
+
+                <input type="radio" id="rock" name="music_type" value="Rock">
+                <label for="rock">Rock</label><br>
+
+                <input type="radio" id="classical" name="music_type" value="Classical">
+                <label for="classical">Classical</label><br>
+
+                <input type="radio" id="jazz" name="music_type" value="Jazz">
+                <label for="jazz">Jazz</label><br>
+            </fieldset>
+            <br>
+
+            <!-- Music Genre Selection List -->
+            <label for="genre">Choose your favorite genre:</label>
+            <select id="genre" name="genre">
+                <option value="pop">Pop</option>
+                <option value="rock">Rock</option>
+                <option value="hiphop">Hip-hop</option>
+                <option value="classical">Classical</option>
+            </select><br><br>
+
+            <!-- Date of listening music -->
+            <label for="date">Date when you listened to the music:</label>
+            <input type="date" id="date" name="date"><br><br>
+
+            <!-- Submit and Reset Buttons -->
+            <div class="submit-reset-buttons">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>Your Name: John Doe</p>
+        <p>Email: john.doe@example.com</p>
+    </footer>
+
+</body>
+</html>
